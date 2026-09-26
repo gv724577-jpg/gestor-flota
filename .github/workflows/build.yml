@@ -25,10 +25,10 @@ jobs:
 
     - name: Build Executable with PyInstaller
       run: |
-        pyinstaller --noconfirm --onedir --windowed --exclude-module pyarrow gemini-code-1790432984483.py
+        pyinstaller --noconfirm --onedir --windowed main.py
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4
       with:
         name: GestorFlota_Ejecutable
-        path: dist/gemini-code-1790432984483/
+        path: dist/main/
