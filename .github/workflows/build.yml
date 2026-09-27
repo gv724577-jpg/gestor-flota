@@ -25,7 +25,7 @@ jobs:
 
     - name: Build Executable with PyInstaller
       run: |
-        pyinstaller --noconfirm --onedir --console --copy-metadata streamlit --copy-metadata click --collect-all streamlit main.py
+        pyinstaller --noconfirm --onedir --console --add-data "main.py;." --copy-metadata streamlit --copy-metadata click --collect-all streamlit main.py
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4
